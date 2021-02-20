@@ -1,0 +1,107 @@
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.toast {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  top: 40%;
+  right: 20%;
+  position: absolute;
+  transition: 1.5s;
+  animation-name: rightToLeft;
+  animation-duration: 1.5s;
+  padding: 1rem 4rem;
+  font-size: larger;
+  height: auto;
+}
+.toast h3 {
+  font-weight: lighter;
+}
+.cross {
+  position: absolute;
+  top: 2px;
+  padding: 1px 3px;
+  right: 3px;
+  cursor: pointer;
+}
+
+.main button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+.main .btnRed {
+  background: red;
+}
+.main .btnGreen {
+  background: rgb(0, 255, 0);
+}
+.main .btnBlue {
+  color: white;
+  background: rgb(0, 132, 255);
+}
+
+.initial {
+  display: initial;
+}
+.none {
+  display: none;
+}
+
+.red {
+  background: red;
+  border: none;
+}
+
+.green {
+  background: rgb(0, 255, 0);
+
+  border: none;
+}
+.blue {
+  background: rgb(0, 153, 255);
+
+  border: none;
+}
+
+.fade
+{
+   
+   animation-name: fade;
+   animation-duration: 1.5s;
+   animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 410px) {
+  .toast {
+    font-size: small;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    right: 0;
+    transform: skewX(-10deg);
+  }
+  to {
+    right: 20%;
+    transform: skewX(0deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    right: 20%;
+    transform: skewX(10deg);
+  }
+  to {
+    right: 0;
+    transform: skewX(0deg);
+    opacity: 0;
+  }
+}
